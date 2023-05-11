@@ -1,0 +1,81 @@
+# MatPlotLib:
+
+Matplotlib is a plotting library for Python, used for creating visualizations of data in a variety of formats,
+including line plots, bar plots, histograms, scatter plots, and more.
+
+# Characteristics of Matplotlib:
+
+1. Customization: Matplotlib allows extensive customization of plots, including labels, colors, line
+styles, and more.
+
+2. Integration: Matplotlib can be easily integrated with other Python libraries, such as NumPy and
+Pandas, to plot data from those libraries.
+
+3. Compatibility: Matplotlib can output plots in a variety of formats, including PNG, PDF, and SVG,
+making it easy to include plots in documents or web pages.
+
+4. Easy to use: Matplotlib has a simple and intuitive API, making it easy to create plots with just a few
+lines of code.
+
+5. High-quality output: Matplotlib can produce high-quality plots suitable for printing or publishing.
+
+6. Large community: Matplotlib is widely used and has a large community of users and developers,
+making it easy to find help and examples.
+
+
+
+Most of the Matplotlib utilities lies under the pyplot submodule, and are usually imported under the plt alias:
+
+import matplotlib.pyplot as plt
+
+in order to plot a diagram we need x and y values by default we create a line diagram.
+
+x and y values can be given with np.array([]).
+
+and plot the two axis values with plt.plot(x,y).
+
+There are other important methods of matplotlib such as:
+
+plt.xlabel('angle') // To set the x axis label
+plt.ylabel("sine") // To set the y axis label
+plt.title("sine wave") // To set the title of the diagram/graph
+plt.show() // to show the graph/diagram
+
+
+# Figure
+
+A Figure is a container for a plotting area. It contains one or more subplots, each of which can contain one or more
+axes for plotting data. A figure can be created using the figure function from the matplotlib.pyplot module.
+import matplotlib.pyplot as plt
+fig = plt.figure()
+
+## Parameters :
+Figsize (width,height) - tuple in inches
+Dpi - Dots per inches
+Facecolor - Figure patch facecolor
+Edgecolor - Figure patch edge color
+Linewidth - Edge line width
+
+
+# Axes
+
+An Axes represents an individual plotting area within a figure. An Axes contains two or three axis objects
+(horizontal XAxis, vertical YAxis, and sometimes a ZAxis) and several methods for plotting data, such as plot,
+scatter, hist, etc. An Axes is created within a Figure as a subplot.
+
+## The add_axes method in Matplotlib is used to add an Axes to a Figure at a
+specified location. The method takes several positional arguments: left, bottom,
+width, and height, which specify the position and size (in float) of the Axes relative
+to the Figure.
+import matplotlib.pyplot as plt
+fig = plt.figure()
+ax = fig.add_axes([left, bottom, width, height])
+
+## Parameters :
+Labels: axis labels, title, and tick labels can be added using methods such as set_xlabel, set_ylabel, set_title,
+set_xticks, set_yticks, etc.
+Limits: The limits of the x and y axis can be set using methods such as set_xlim, set_ylim.
+Legends: A legend can be added to the plot using the legend method, to provide a key for the data.
+Grids: Grids can be added to the plot to make it easier to read, using the grid method.
+Colormaps: Colormaps can be used to color data points based on a third value,
+for example, to represent a third dimension in a 3D plot.
